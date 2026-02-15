@@ -7,4 +7,15 @@ body {
   height: 683px;
   width: 535px;
   object-fit: cover;
+  transform: rotate(-45deg);
+  padding-top: 22px;
+  padding-left: 25px;
+}
+
+.profile-pic {
+  background-image: url("assets/img/shape.svg");
+  background-repeat: no-repeat;
+  width: 594px;
+  height: 710px;
+  transform: rotate(45deg);
 }
