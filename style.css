@@ -2,3 +2,9 @@ body {
   background-color: #262e34;
   margin: 0;
 }
+
+.picture {
+  height: 683px;
+  width: 535px;
+  object-fit: cover;
+}
