@@ -12,8 +12,13 @@ body {
   padding-left: 25px;
 }
 
-.profile-pic {
+.profile-pic:hover {
   background-image: url("assets/img/shape.svg");
+  background-repeat: no-repeat;
+}
+
+.profile-pic {
+  background-image: url("assets/img/shape_hover.svg");
   background-repeat: no-repeat;
   width: 594px;
   height: 710px;
