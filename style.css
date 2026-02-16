@@ -105,6 +105,13 @@ h1 {
   margin: 0;
 }
 
+.hero-logo-subtitle-navbar {
+  font-family: "Josefin-Regular";
+  font-size: 16px;
+  color: #262e34;
+  margin: 0;
+}
+
 .contact-sidebar {
   display: flex;
   flex-direction: column;
@@ -123,4 +130,13 @@ h1 {
 
 .linkedin-btn-header:hover {
   background-image: url("assets/icons/linkedin_btn_header_hover.svg");
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 104px;
+  display: flex;
+  background-color: #89bcd9;
 }
