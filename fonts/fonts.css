@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Anta-Regular";
-  src: url(assets/fonts/Anta-Regular.ttf);
+  src: url("../assets/fonts/Anta-Regular.ttf");
 }
 
 @font-face {
   font-family: "Josefin-Bold";
-  src: url(assets/fonts/JosefinSans-Bold.ttf);
+  src: url("../assets/fonts/JosefinSans-Bold.ttf");
 }
 
 @font-face {
   font-family: "Josefin-Regular";
-  src: url(assets/fonts/JosefinSans-Regular.ttf);
+  src: url("../assets/fonts/JosefinSans-Regular.ttf");
 }

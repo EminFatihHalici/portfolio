@@ -3,6 +3,20 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: "Anta-Regular";
+  font-size: 88px;
+  color: #f8f5ec;
+  line-height: 120%;
+}
+
+.subtitle {
+  font-family: "Josefin-Regular";
+  font-size: 40px;
+  color: #f8f5ec;
+  line-height: 120%;
+}
+
 .hero-container {
   width: 100%;
   max-width: 1214px;
