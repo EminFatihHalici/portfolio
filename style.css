@@ -8,6 +8,20 @@ h1 {
   font-size: 88px;
   color: #f8f5ec;
   line-height: 120%;
+  margin: 0;
+  text-align: center;
+}
+
+.scroll-down {
+  background-image: url("assets/icons/arrow_down.svg");
+  width: 38px;
+  background-repeat: no-repeat;
+  height: 89px;
+}
+
+.scroll-down:hover {
+  background-image: url("assets/icons/arrow_down_hover.svg");
+  background-repeat: no-repeat;
 }
 
 .subtitle {
@@ -15,9 +29,13 @@ h1 {
   font-size: 40px;
   color: #f8f5ec;
   line-height: 120%;
+  margin: 0;
 }
 
 .hero-container {
+  padding-top: 41px;
+  padding-left: 114px;
+  padding-right: 112px;
   width: 100%;
   max-width: 1214px;
   height: 705px;
@@ -27,18 +45,21 @@ h1 {
   margin: 0 auto;
 }
 
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
 .picture {
   height: 683px;
   width: 535px;
   object-fit: cover;
-  transform: rotate(-45deg);
-  padding-top: 22px;
-  padding-left: 25px;
 }
 
 .profile-pic:hover {
   background-image: url("assets/img/shape.svg");
-  background-repeat: no-repeat;
 }
 
 .profile-pic {
@@ -46,29 +67,50 @@ h1 {
   background-repeat: no-repeat;
   width: 594px;
   height: 710px;
-  transform: rotate(45deg);
 }
 
 .logo {
   background-image: url("assets/icons/hero_logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  transition: background-image 0.3s ease-out;
-  width: 52px;
-  height: 32px;
+  margin-left: 5px;
+  width: 56px;
+  height: 38px;
 }
 
 .logo:hover {
   background-image: url("assets/icons/hero_logo_hover.svg");
+  transition: background-image 0.5s ease-out;
+  width: 56px;
+  height: 38px;
 }
 
 .hero-logo {
+  padding-top: 121px;
   width: 66px;
   height: 73px;
 }
 
-.scroll-down:hover {
-  background-image: url("assets/icons/arrow_down_hover.svg");
+.hero-logo-name {
+  font-family: "Anta-Regular";
+  font-size: 16px;
+  color: #f8f5ec;
+  margin: 0;
+}
+
+.hero-logo-subtitle {
+  font-family: "Josefin-Regular";
+  font-size: 16px;
+  color: #89bcd9;
+  margin: 0;
+}
+
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: flex-start;
+  padding-top: 68px;
 }
 
 .mail-btn-header:hover {
