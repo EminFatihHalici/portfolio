@@ -52,21 +52,37 @@ h1 {
   gap: 36px;
 }
 
+.profile-pic-wrapper {
+  position: relative;
+}
+
 .picture {
+  position: relative;
   height: 683px;
-  width: 535px;
+  width: 640px;
   object-fit: cover;
+  z-index: 2;
 }
 
 .profile-pic:hover {
   background-image: url("assets/img/shape.svg");
+  width: 594px;
+  height: 710px;
+  object-fit: cover;
 }
 
 .profile-pic {
   background-image: url("assets/img/shape_hover.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
   background-repeat: no-repeat;
   width: 594px;
   height: 710px;
+  top: -85px;
+  left: -202px;
+  transform: rotate(-45deg);
+  z-index: 1;
 }
 
 .logo {
