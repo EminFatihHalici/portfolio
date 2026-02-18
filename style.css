@@ -3,6 +3,12 @@ body {
   margin: 0;
 }
 
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   font-family: "Anta-Regular";
   font-size: 88px;
@@ -10,6 +16,13 @@ h1 {
   line-height: 120%;
   margin: 0;
   text-align: center;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .scroll-down {
@@ -36,13 +49,14 @@ h1 {
   padding-top: 41px;
   padding-left: 114px;
   padding-right: 112px;
+  flex-grow: 1;
   width: 100%;
-  max-width: 1214px;
-  height: 705px;
+  max-width: 1920px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -163,4 +177,11 @@ h1 {
   height: 104px;
   display: flex;
   background-color: #89bcd9;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
