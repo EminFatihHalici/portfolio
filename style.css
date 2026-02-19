@@ -188,7 +188,16 @@ h1 {
 
 .navbar-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+.hero-logo-navbar {
+  width: 58px;
+  height: 72px;
+}
+
+.navbar-logo {
+  margin-left: 8px;
 }
