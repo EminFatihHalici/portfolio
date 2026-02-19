@@ -37,6 +37,11 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.arrow-down-container {
+  display: flex;
+  margin-top: 120px;
+}
+
 .subtitle {
   font-family: "Josefin-Regular";
   font-size: 40px;
