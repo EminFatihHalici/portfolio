@@ -188,7 +188,9 @@ h1 {
 
 .navbar-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 110px;
+  padding-right: 110px;
   align-items: center;
   height: 100%;
 }
@@ -204,7 +206,7 @@ h1 {
 
 .menu {
   display: flex;
-  gap: 32px;
+  gap: 92px;
   justify-content: center;
   align-items: center;
 }
@@ -213,8 +215,23 @@ h1 {
   font-family: "Josefin-Regular";
   font-weight: 500;
   font-size: 26px;
+  width: 121px;
   color: #262e34;
-  text-decoration: none;
+  background-color: #89bcd9;
+  border: none;
+}
+
+.menu-text:hover {
+  cursor: pointer;
+  color: #f8f5ec;
+}
+
+.menu-text:focus {
+  background-image: url("assets/icons/ellipse-menu.svg");
+  color: #f8f5ec;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .language-change {
