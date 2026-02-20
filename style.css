@@ -286,3 +286,10 @@ h2 {
   padding-right: 290px;
   padding-top: 104px;
 }
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
