@@ -4,7 +4,7 @@ body {
 }
 
 header {
-  min-height: 100vh;
+  min-height: calc(100vh - 104px);
   display: flex;
   flex-direction: column;
 }
@@ -225,4 +225,8 @@ h1 {
   align-items: center;
   gap: 16px;
   color: #262e34;
+}
+
+.why-me-section {
+  height: 100vh;
 }
