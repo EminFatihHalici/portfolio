@@ -201,3 +201,28 @@ h1 {
 .navbar-logo {
   margin-left: 8px;
 }
+
+.menu {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-text {
+  font-family: "Josefin-Regular";
+  font-weight: 500;
+  font-size: 26px;
+  color: #262e34;
+  text-decoration: none;
+}
+
+.language-change {
+  font-family: "Josefin-Regular";
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #262e34;
+}
