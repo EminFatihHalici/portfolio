@@ -314,10 +314,7 @@ h2 {
 
 .text-and-button {
   width: 380px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
 }
 
 .why-me-text {
@@ -325,4 +322,18 @@ h2 {
   font-size: 18px;
   color: #f8f5ec;
   text-align: justify;
+}
+
+.lets-talk-btn {
+  background-image: url("assets/icons/lets_talk_btn.svg");
+  width: 134px;
+  height: 48px;
+  border-style: none;
+  background-color: #262e34;
+  justify-self: end;
+}
+
+.lets-talk-btn:hover {
+  cursor: pointer;
+  background-image: url("assets/icons/lets_talk_btn_hover.svg");
 }
