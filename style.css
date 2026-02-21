@@ -337,3 +337,12 @@ h2 {
   cursor: pointer;
   background-image: url("assets/icons/lets_talk_btn_hover.svg");
 }
+
+.my-skills-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 104px;
+  padding-left: 290px;
+  padding-right: 290px;
+}
