@@ -340,9 +340,58 @@ h2 {
 
 .my-skills-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 104px;
   padding-left: 290px;
   padding-right: 290px;
+}
+
+.my-skills-all-info {
+  display: flex;
+  gap: 79px;
+}
+
+.skill-set {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-content: center;
+}
+
+.currently-learning {
+  background-image: url("assets/img/learning_skill_shape.svg");
+  width: 375px;
+  height: 391px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.currently-learning:hover {
+  background-image: url("assets/img/learning_skill_shape_hover.svg");
+  transition: background-image 0.4s ease-in;
+}
+
+.learning-icon-angular {
+  height: 52px;
+}
+
+.learning-icon-typescript {
+  height: 54px;
+}
+
+.currently-learning-icon {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.learning-text {
+  width: 300px;
+  text-align: center;
 }
