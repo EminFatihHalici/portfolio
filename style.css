@@ -403,3 +403,31 @@ h2 {
   justify-content: center;
   padding-top: 104px;
 }
+
+.my-projects-all-info {
+  width: 100%;
+}
+
+.project-name {
+  font-family: "Josefin-Regulaer";
+  font-size: 30px;
+  color: #89bcd9;
+  padding: 16px;
+}
+
+.tabs-switch {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 102px;
+  gap: 20px;
+}
+
+.rectangle-frame {
+  background-color: #89bcd912;
+}
+
+.project-info-section {
+  padding-top: 31px;
+  padding-right: 118px;
+  padding-left: 123px;
+}
