@@ -395,3 +395,11 @@ h2 {
   width: 300px;
   text-align: center;
 }
+
+.my-projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 104px;
+}
