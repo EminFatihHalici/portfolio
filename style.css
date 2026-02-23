@@ -452,6 +452,8 @@ h3 {
   padding-top: 31px;
   padding-right: 118px;
   padding-left: 123px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-info-section p {
@@ -483,4 +485,8 @@ h3 {
 .about-content {
   display: flex;
   flex-direction: column;
+}
+
+.project-section-left {
+  width: calc(65%);
 }
