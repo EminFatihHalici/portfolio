@@ -446,6 +446,7 @@ h3 {
 
 .rectangle-frame {
   background-color: #89bcd912;
+  max-height: 548px;
 }
 
 .project-info-section {
@@ -454,6 +455,8 @@ h3 {
   padding-left: 123px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  max-height: 548px;
 }
 
 .project-info-section p {
@@ -489,4 +492,32 @@ h3 {
 
 .project-section-left {
   width: calc(65%);
+}
+
+.project-section-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-technologies p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-technologies {
+  padding-bottom: 16px;
+}
+
+.project-technologies-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.project-screenshot {
+  padding-bottom: 34px;
 }
