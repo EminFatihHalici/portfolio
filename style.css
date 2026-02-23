@@ -26,6 +26,10 @@ h2 {
   padding-bottom: 80px;
 }
 
+.d-none {
+  display: none;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -409,10 +413,21 @@ h2 {
 }
 
 .project-name {
-  font-family: "Josefin-Regulaer";
+  font-family: "Josefin-Regular";
   font-size: 30px;
   color: #89bcd9;
   padding: 16px;
+  background-color: #262e34;
+  border: none;
+}
+
+.project-name:hover {
+  cursor: pointer;
+  color: #f8f5ec;
+}
+
+.project-name.active {
+  background-color: #89bcd912;
 }
 
 .tabs-switch {
