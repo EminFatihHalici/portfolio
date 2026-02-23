@@ -26,6 +26,13 @@ h2 {
   padding-bottom: 80px;
 }
 
+h3 {
+  font-family: "Josefin-Regular";
+  font-size: 28px;
+  color: #f8f5ec;
+  margin: 0;
+}
+
 .d-none {
   display: none;
 }
@@ -445,4 +452,35 @@ h2 {
   padding-top: 31px;
   padding-right: 118px;
   padding-left: 123px;
+}
+
+.project-info-section p {
+  color: #f8f5ec;
+  font-size: 18px;
+  font-family: "Josefin-Regular";
+}
+
+.project-blue-ellipse {
+  background-image: url("assets/img/project-blue-ellipse.svg");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.about-project,
+.work-process-organisation,
+.group-work-experience {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-content span {
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
 }
