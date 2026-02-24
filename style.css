@@ -450,7 +450,6 @@ h3 {
 }
 
 .project-info-section {
-  display: none !important;
   padding-top: 31px;
   padding-right: 118px;
   padding-left: 123px;
@@ -560,4 +559,8 @@ h3 {
   width: 453.47px;
   height: 312px;
   border-radius: 30px;
+}
+
+.block {
+  display: block;
 }

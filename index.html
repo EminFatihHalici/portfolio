@@ -6,8 +6,9 @@
     <title>Emin Fatih Halici</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fonts/fonts.css" />
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <div class="hero-container">
         <div class="profile-pic-wrapper">
@@ -208,9 +209,25 @@
         <h2>My Projects</h2>
         <div class="my-projects-all-info">
           <div class="tabs-switch">
-            <button class="project-name">1. Join</button>
-            <button class="project-name">2. El Pollo Loco</button>
-            <button class="project-name">3. Portfolio</button>
+            <button
+              class="project-name"
+              onclick="openProjects(event, 'join')"
+              id="defaultOpen"
+            >
+              1. Join
+            </button>
+            <button
+              class="project-name"
+              onclick="openProjects(event, 'el-pollo-loco')"
+            >
+              2. El Pollo Loco
+            </button>
+            <button
+              class="project-name"
+              onclick="openProjects(event, 'portfolio')"
+            >
+              3. Portfolio
+            </button>
           </div>
           <div class="rectangle-frame">
             <div id="join" class="project-info-section">
@@ -247,7 +264,7 @@
                     <p>
                       Our team consisted of three developers, and my primary
                       role was the development of the add-task area, task-edit
-                      functionality and olso some other functionalitys. Through
+                      functionality and olso some other functionalities. Through
                       excellent teamwork and clear communication, we
                       successfully synchronized our tasks via Git and ensured a
                       high-quality, professional result.
