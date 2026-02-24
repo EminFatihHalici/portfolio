@@ -521,3 +521,30 @@ h3 {
 .project-screenshot {
   padding-bottom: 34px;
 }
+
+.project-buttons {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-github-btn {
+  border-style: none;
+  background-color: #2e3a42;
+}
+
+.project-github-btn svg:hover {
+  fill: #f8f5ec1f;
+  cursor: pointer;
+}
+
+.project-live-test-btn {
+  border-style: none;
+  background-color: #2e3a42;
+}
+
+.project-live-test-btn svg:hover rect {
+  fill: #f8f5ec;
+  cursor: pointer;
+}
