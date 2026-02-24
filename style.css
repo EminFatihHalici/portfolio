@@ -423,7 +423,7 @@ h3 {
   font-family: "Josefin-Regular";
   font-size: 30px;
   color: #89bcd9;
-  padding: 16px;
+  padding: 28px;
   background-color: #262e34;
   border: none;
 }
@@ -435,6 +435,7 @@ h3 {
 
 .project-name.active {
   background-color: #89bcd912;
+  border-radius: 28px 28px 0 0;
 }
 
 .tabs-switch {
