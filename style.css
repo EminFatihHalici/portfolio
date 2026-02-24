@@ -34,7 +34,7 @@ h3 {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .container {
@@ -450,6 +450,7 @@ h3 {
 }
 
 .project-info-section {
+  display: none !important;
   padding-top: 31px;
   padding-right: 118px;
   padding-left: 123px;
@@ -547,4 +548,16 @@ h3 {
 .project-live-test-btn svg:hover rect {
   fill: #f8f5ec;
   cursor: pointer;
+}
+
+.el-pollo-loco-screenshot {
+  width: 453.47px;
+  height: 312px;
+  border-radius: 30px;
+}
+
+.portfolio-screenshot {
+  width: 453.47px;
+  height: 312px;
+  border-radius: 30px;
 }
