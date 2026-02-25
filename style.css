@@ -565,3 +565,41 @@ h3 {
 .block {
   display: block;
 }
+
+.my-references-section {
+  padding-top: 80px;
+  padding-left: 116px;
+  padding-right: 116px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.refrences-headline {
+  color: #89bcd9;
+}
+
+.refrences {
+  background-image: url("assets/img/references_ellipse.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 400px;
+}
+
+.refrences:hover {
+  background-image: url("assets/img/refrences_ellipse_hover.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.references-container {
+  display: flex;
+  padding-top: 56px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
