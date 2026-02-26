@@ -576,19 +576,41 @@ h3 {
   justify-content: center;
 }
 
-.refrences-headline {
+.references-headline {
   color: #89bcd9;
 }
 
-.refrences {
+.references {
   background-image: url("assets/img/references_ellipse.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 400px;
   height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.refrences:hover {
+.references-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.references-text {
+  max-width: 300px;
+  text-align: center;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+  color: #f8f5ec;
+  margin: 0;
+}
+
+.references:hover {
   background-image: url("assets/img/refrences_ellipse_hover.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -602,4 +624,33 @@ h3 {
   gap: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.references-name {
+  font-family: "Josefin-Bold";
+  font-size: 26px;
+  color: #f8f5ec;
+  margin: 0;
+}
+
+.refrence-place {
+  margin: 0;
+  font-size: 18px;
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+}
+
+.reference-place-color {
+  color: #89bcd9;
+}
+
+.reference-link {
+  text-decoration: none;
+  color: #89bcd9;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+}
+
+.reference-link:hover {
+  text-decoration-line: underline;
 }
