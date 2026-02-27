@@ -660,3 +660,21 @@ h3 {
 .reference-link:hover {
   text-decoration-line: underline;
 }
+
+.contact-section {
+  padding-top: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.arrow-up img:hover {
+  background-image: url("assets/icons/arrow_up_hover.svg");
+}
