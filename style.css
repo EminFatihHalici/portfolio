@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #262e34;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -500,6 +505,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 28px;
 }
 
 .project-technologies p {
