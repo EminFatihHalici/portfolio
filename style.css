@@ -689,8 +689,20 @@ h3 {
   color: #f8f5ec;
   font-family: "Josefin-Regular";
   font-size: 18px;
+  max-width: 50%;
 }
 
-.form-info .mail-info {
+.mail-tel {
+  max-width: 50%;
+}
+
+.form-info,
+.mail-form {
   max-width: 911px;
+}
+
+.form-info-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
