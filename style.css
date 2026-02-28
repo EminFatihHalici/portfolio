@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #262e34;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -500,6 +505,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 28px;
 }
 
 .project-technologies p {
@@ -653,4 +659,38 @@ h3 {
 
 .reference-link:hover {
   text-decoration-line: underline;
+}
+
+.contact-section {
+  padding-top: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.arrow-up img:hover {
+  background-image: url("assets/icons/arrow_up_hover.svg");
+}
+
+.arrow-up-section {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.info-text {
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+}
+
+.form-info .mail-info {
+  max-width: 911px;
 }
