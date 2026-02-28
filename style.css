@@ -690,10 +690,14 @@ h3 {
   font-family: "Josefin-Regular";
   font-size: 18px;
   max-width: 50%;
+  margin: 0;
 }
 
 .mail-tel {
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form-info,
@@ -702,7 +706,73 @@ h3 {
 }
 
 .form-info-area {
+  gap: 36px;
+  display: flex;
+}
+
+.mail,
+.tel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
+  font-family: "Josefin-Regular";
+  font-size: 20px;
+  color: #f8f5ec;
+}
+
+.mail-form {
+  padding-top: 48px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input input,
+textarea {
+  background-color: #262f34;
+  border-radius: 30px;
+  height: 60px;
+  width: 445px;
+  border: 1px #89bcd9 solid;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+  width: 911px;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+}
+
+.input label {
+  color: #89bcd9;
+  font-size: 18px;
+  font-family: "Josefin-Sans";
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 21px;
+  padding-bottom: 16px;
+}
+
+.form-footer {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-footer button {
+  align-self: flex-end;
 }
