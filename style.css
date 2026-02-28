@@ -678,3 +678,19 @@ h3 {
 .arrow-up img:hover {
   background-image: url("assets/icons/arrow_up_hover.svg");
 }
+
+.arrow-up-section {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.info-text {
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+}
+
+.form-info .mail-info {
+  max-width: 911px;
+}
