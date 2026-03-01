@@ -635,6 +635,7 @@
       </div>
 
       <div class="contact-section">
+        <div class="spacer"></div>
         <div class="contact-me-container">
           <h2>Contact me</h2>
           <div class="form-info">
@@ -674,17 +675,21 @@
             </div>
             <div class="form-footer">
               <div class="privacy-check">
-                <input type="checkbox" id="privacy" class="hidden-checkbox" />
-                <label for="privacy">
-                  <img src="" alt="" />
-                  <img src="" alt="" />
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  class="hidden-checkbox"
+                  required
+                />
+                <label for="privacy" class="custom-checkbox-label">
+                  <span class="checkbox-icon"></span>
                   <span
                     >I've read the <a href="#">privacy policy</a> and agree to
                     the processing of my data as outlined.
                   </span>
                 </label>
               </div>
-              <button type="submit">Send</button>
+              <button type="submit" class="send-button">Send</button>
             </div>
           </form>
         </div>
