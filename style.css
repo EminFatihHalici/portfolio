@@ -14,6 +14,13 @@ header {
   flex-direction: column;
 }
 
+footer {
+  height: 214px;
+  background-color: #89bcd9;
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   font-family: "Anta-Regular";
   font-size: 88px;
@@ -664,8 +671,24 @@ h3 {
 .contact-section {
   padding-top: 104px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.spacer,
+.arrow-up-section {
+  flex: 1 0 0;
+  min-width: 50px;
+}
+
+.contact-me-container {
+  flex: 0 1 auto;
+}
+
+.arrow-up-section {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contact-me-container {
@@ -683,6 +706,12 @@ h3 {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+}
+
+.arrow-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-text {
@@ -718,6 +747,20 @@ h3 {
   font-family: "Josefin-Regular";
   font-size: 20px;
   color: #f8f5ec;
+  cursor: pointer;
+}
+
+.mail:hover,
+.tel:hover {
+  color: #89bcd9;
+}
+
+.mail img:hover {
+  background-image: url("assets/icons/email_icon_hover.svg");
+}
+
+.tel img:hover {
+  background-image: url("assets/icons/phone_icon_hover.svg");
 }
 
 .mail-form {
@@ -757,7 +800,17 @@ textarea {
 .input label {
   color: #89bcd9;
   font-size: 18px;
-  font-family: "Josefin-Sans";
+  font-family: "Josefin-Regular";
+}
+
+.input input:focus {
+  outline: none;
+  background-color: #89bcd91f;
+}
+
+.message textarea:focus {
+  outline: none;
+  background-color: #89bcd91f;
 }
 
 .input-wrapper {
@@ -768,11 +821,74 @@ textarea {
 
 .form-footer {
   padding-top: 16px;
+  padding-bottom: 180px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .form-footer button {
   align-self: flex-end;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox-label span,
+a {
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+}
+
+.custom-checkbox-label a {
+  text-decoration: none;
+  color: #89bcd9;
+}
+
+.checkbox-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("assets/icons/checkbox.svg");
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.custom-checkbox-label:hover .checkbox-icon {
+  background-image: url("assets/icons/checkbox_hover.svg");
+  background-position: calc(50% - 1px) calc(50% - 1px);
+}
+
+.hidden-checkbox:checked + .custom-checkbox-label .checkbox-icon {
+  background-image: url("assets/icons/checkboc_checked.svg");
+  background-position: calc(50% - 1px) calc(50% - 1px);
+}
+
+.custom-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.send-button {
+  background-color: #262e34;
+  border: 1px #f8f5ec solid;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Josefin-Regular";
+  color: #f8f5ec;
+  border-radius: 30px;
+  width: 101px;
+  height: 48px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
