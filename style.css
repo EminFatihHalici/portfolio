@@ -720,6 +720,19 @@ h3 {
   color: #f8f5ec;
 }
 
+.mail:hover,
+.tel:hover {
+  color: #89bcd9;
+}
+
+.mail img:hover {
+  background-image: url("assets/icons/email_icon_hover.svg");
+}
+
+.tel img:hover {
+  background-image: url("assets/icons/phone_icon_hover.svg");
+}
+
 .mail-form {
   padding-top: 48px;
 }
@@ -757,7 +770,17 @@ textarea {
 .input label {
   color: #89bcd9;
   font-size: 18px;
-  font-family: "Josefin-Sans";
+  font-family: "Josefin-Regular";
+}
+
+.input input:focus {
+  outline: none;
+  background-color: #89bcd91f;
+}
+
+.message textarea:focus {
+  outline: none;
+  background-color: #89bcd91f;
 }
 
 .input-wrapper {
