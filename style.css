@@ -917,6 +917,18 @@ a {
   background-image: url("assets/icons/linkedin_footer_icon.svg");
 }
 
+.github-footer:hover {
+  background-image: url("assets/icons/github_footer_icon_hover.svg");
+}
+
+.mail-footer:hover {
+  background-image: url("assets/icons/mail_footer_icon_hover.svg");
+}
+
+.linkedin-footer:hover {
+  background-image: url("assets/icons/linkedin_footer_icon_hover.svg");
+}
+
 .footer-info-right {
   display: flex;
   align-items: center;
@@ -944,6 +956,10 @@ a {
   font-size: 18px;
   text-decoration: none;
   color: #262e34;
+}
+
+.footer-info-left a:hover {
+  color: #f8f5ec;
 }
 
 .footer-info-left {
