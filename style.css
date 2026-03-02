@@ -242,8 +242,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+.menu-text p {
+  text-align: center;
+}
 
 .menu-text {
+  text-decoration: none;
   font-family: "Josefin-Regular";
   font-weight: 500;
   font-size: 26px;
