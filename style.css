@@ -965,3 +965,48 @@ a {
 .footer-info-left {
   font-size: 18px;
 }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 104px;
+  bottom: 214px;
+  left: 0;
+  right: 0;
+  background: #262e34;
+  z-index: 99;
+  overflow-y: auto;
+}
+
+body:has(#legal-overlay:target) {
+  overflow: hidden;
+}
+
+.overlay:target {
+  display: flex;
+}
+
+.overlay p {
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+  text-align: left;
+}
+
+.overlay span {
+  color: #89bcd9;
+}
+
+.overlay h3 {
+  color: #89bcd9;
+  padding-top: 24px;
+}
+
+.legal-notice-container {
+  padding-left: 200px;
+  padding-right: 208px;
+}
+
+.legal-notice-container h2 {
+  padding-top: 65px;
+}
