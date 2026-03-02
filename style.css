@@ -242,8 +242,12 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+.menu-text p {
+  text-align: center;
+}
 
 .menu-text {
+  text-decoration: none;
   font-family: "Josefin-Regular";
   font-weight: 500;
   font-size: 26px;
@@ -917,6 +921,18 @@ a {
   background-image: url("assets/icons/linkedin_footer_icon.svg");
 }
 
+.github-footer:hover {
+  background-image: url("assets/icons/github_footer_icon_hover.svg");
+}
+
+.mail-footer:hover {
+  background-image: url("assets/icons/mail_footer_icon_hover.svg");
+}
+
+.linkedin-footer:hover {
+  background-image: url("assets/icons/linkedin_footer_icon_hover.svg");
+}
+
 .footer-info-right {
   display: flex;
   align-items: center;
@@ -946,6 +962,55 @@ a {
   color: #262e34;
 }
 
+.footer-info-left a:hover {
+  color: #f8f5ec;
+}
+
 .footer-info-left {
   font-size: 18px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 104px;
+  bottom: 214px;
+  left: 0;
+  right: 0;
+  background: #262e34;
+  z-index: 99;
+  overflow-y: auto;
+}
+
+body:has(#legal-overlay:target) {
+  overflow: hidden;
+}
+
+.overlay:target {
+  display: flex;
+}
+
+.overlay p {
+  color: #f8f5ec;
+  font-family: "Josefin-Regular";
+  font-size: 18px;
+  text-align: left;
+}
+
+.overlay span {
+  color: #89bcd9;
+}
+
+.overlay h3 {
+  color: #89bcd9;
+  padding-top: 24px;
+}
+
+.legal-notice-container {
+  padding-left: 200px;
+  padding-right: 208px;
+}
+
+.legal-notice-container h2 {
+  padding-top: 65px;
 }
