@@ -1029,3 +1029,8 @@ body:has(#legal-overlay:target) {
     opacity: 0;
   }
 }
+
+.location-info {
+  display: flex;
+  align-items: center;
+}

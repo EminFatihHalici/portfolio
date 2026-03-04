@@ -4,12 +4,12 @@ let isDeleting = false;
 
 const aboutMeData = [
   {
-    icon: "assets/icons/location.svg",
+    icon: "<img src= 'assets/icons/location.svg'>",
     text: "I am located in Frankfurt am Main...",
   },
 
   {
-    icon: "assets/icons/remote.svg",
+    icon: "<img src= 'assets/icons/remote.svg'>",
     text: "I am open to work remote...",
   },
 ];
@@ -45,6 +45,8 @@ function type() {
   } else {
     currentChar--;
   }
+  let currentImg = currentObject.icon;
+  document.getElementById("icon-container").innerHTML = currentImg;
   let currentText = fullText.substring(0, currentChar);
   document.getElementById("typewriter-text").innerHTML = currentText;
   if (!isDeleting && currentChar === fullText.length) {
