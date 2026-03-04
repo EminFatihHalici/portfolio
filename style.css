@@ -1014,3 +1014,18 @@ body:has(#legal-overlay:target) {
 .legal-notice-container h2 {
   padding-top: 65px;
 }
+
+.cursor {
+  color: #f8f5ec;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
