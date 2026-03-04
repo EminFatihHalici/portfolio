@@ -5,12 +5,12 @@ let isDeleting = false;
 const aboutMeData = [
   {
     icon: "<img src= 'assets/icons/location.svg'>",
-    text: "I am located in Frankfurt am Main...",
+    text: "<span>I am</span> located in Frankfurt am Main<span>...</span>",
   },
 
   {
     icon: "<img src= 'assets/icons/remote.svg'>",
-    text: "I am open to work remote...",
+    text: "<span>I am</span> open to work remote<span>...</span>",
   },
 ];
 
@@ -41,18 +41,24 @@ function type() {
   let fullText = currentObject.text;
   let typeSpeed = 200;
   if (!isDeleting) {
+    while (fullText.charAt(currentChar) === "<") {
+      currentChar = fullText.indexOf(">", currentChar) + 1;
+    }
     currentChar++;
   } else {
     currentChar--;
+    if (fullText.charAt(currentChar) === ">") {
+      currentChar = fullText.lastIndexOf("<", currentChar);
+    }
   }
   let currentImg = currentObject.icon;
   document.getElementById("icon-container").innerHTML = currentImg;
   let currentText = fullText.substring(0, currentChar);
   document.getElementById("typewriter-text").innerHTML = currentText;
-  if (!isDeleting && currentChar === fullText.length) {
+  if (!isDeleting && currentChar >= fullText.length) {
     typeSpeed = 2000;
     isDeleting = true;
-  } else if (isDeleting && currentChar === 0) {
+  } else if (isDeleting && currentChar <= 0) {
     isDeleting = false;
     currentLine++;
     if (currentLine === aboutMeData.length) {
