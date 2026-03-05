@@ -1036,5 +1036,5 @@ body:has(#legal-overlay:target) {
 }
 
 .about-me-text {
-  color: #f8f5ec;
+  color: #f8f5ec !important;
 }
