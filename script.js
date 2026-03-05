@@ -1,16 +1,17 @@
 let currentLine = 0;
 let currentChar = 0;
 let isDeleting = false;
+let typeSpeed = 200;
 
 const aboutMeData = [
   {
     icon: "<img src= 'assets/icons/location.svg'>",
-    text: "I am located in Frankfurt am Main...",
+    text: "I am <span class='about-me-text'> located in Frankfurt am Main </span> ...",
   },
 
   {
     icon: "<img src= 'assets/icons/remote.svg'>",
-    text: "I am open to work remote...",
+    text: "I am <span class='about-me-text'> open to work remote </span> ...",
   },
 ];
 
@@ -36,30 +37,50 @@ function openProjects(evt, projectName) {
   }
 }
 
-function type() {
-  let currentObject = aboutMeData[currentLine];
-  let fullText = currentObject.text;
-  let typeSpeed = 200;
-  if (!isDeleting) {
-    currentChar++;
+function updateInterface(icon, text) {
+  let iconContainer = document.getElementById("icon-container");
+  iconContainer.innerHTML = icon;
+
+  let textContainer = document.getElementById("typewriter-text");
+  textContainer.innerHTML = text;
+}
+
+function getNextIndex(index, text, deleting) {
+  if (!deleting) {
+    while (text.charAt(index) === "<") {
+      index = text.indexOf(">", index) + 1;
+    }
+    index++;
   } else {
-    currentChar--;
+    index--;
+    if (text.charAt(index) === ">") {
+      index = text.lastIndexOf("<", index);
+    }
   }
-  let currentImg = currentObject.icon;
-  document.getElementById("icon-container").innerHTML = currentImg;
-  let currentText = fullText.substring(0, currentChar);
-  document.getElementById("typewriter-text").innerHTML = currentText;
-  if (!isDeleting && currentChar === fullText.length) {
+  return index;
+}
+
+function handleState(index, text) {
+  if (!isDeleting && index >= text.length) {
     typeSpeed = 2000;
     isDeleting = true;
-  } else if (isDeleting && currentChar === 0) {
+  } else if (isDeleting && index <= 0) {
     isDeleting = false;
     currentLine++;
     if (currentLine === aboutMeData.length) {
       currentLine = 0;
     }
-    typeSpeed = 500;
-  }
+    typeSpeed = 400;
+  } else typeSpeed = isDeleting ? 100 : 200;
+}
 
+function type() {
+  let currentObject = aboutMeData[currentLine];
+  let fullIcon = currentObject.icon;
+  let fullText = currentObject.text;
+  currentChar = getNextIndex(currentChar, fullText, isDeleting);
+  let visibleText = fullText.substring(0, currentChar);
+  updateInterface(fullIcon, visibleText);
+  handleState(currentChar, fullText);
   setTimeout(type, typeSpeed);
 }
