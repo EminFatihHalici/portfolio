@@ -40,23 +40,26 @@ function openProjects(evt, projectName) {
 }
 
 function updateInterface(obj, text) {
-  let iconContainer = document.getElementById("icon-container");
+  const iconContainer = document.getElementById("icon-container");
+  const textContainer = document.getElementById("typewriter-text");
   iconContainer.innerHTML = obj.icon;
-  let startIndex = obj.text.indexOf(obj.highlight);
-  let highlightLength = obj.highlight.length;
-  let currentHighlight = text.substring(
+  textContainer.innerHTML = getHighlightedHTML(obj.text, text, obj.highlight);
+}
+
+function getHighlightedHTML(fullText, currentTypedText, highlight) {
+  const startIndex = fullText.indexOf(highlight);
+  const highlightLength = highlight.length;
+  if (startIndex === -1 || currentTypedText.length <= startIndex) {
+    return currentTypedText;
+  }
+  const currentHighlight = currentTypedText.substring(
     startIndex,
     startIndex + highlightLength,
   );
-  let html =
-    startIndex !== -1 && text.length > startIndex
-      ? text.replace(
-          currentHighlight,
-          `<span class='about-me-text'>${currentHighlight}</span>`,
-        )
-      : text;
-
-  document.getElementById("typewriter-text").innerHTML = html;
+  return currentTypedText.replace(
+    currentHighlight,
+    `<span class='about-me-text'>${currentHighlight}</span>`,
+  );
 }
 
 function getNextIndex(index, deleting) {
