@@ -6,12 +6,14 @@ let typeSpeed = 200;
 const aboutMeData = [
   {
     icon: "<img src= 'assets/icons/location.svg'>",
-    text: "I am <span class='about-me-text'> located in Frankfurt am Main </span> ...",
+    text: "I am located in Frankfurt am Main ...",
+    highlight: "located in Frankfurt am Main",
   },
 
   {
     icon: "<img src= 'assets/icons/remote.svg'>",
-    text: "I am <span class='about-me-text'> open to work remote </span> ...",
+    text: "I am open to work remote ...",
+    highlight: "open to work remote",
   },
 ];
 
@@ -37,27 +39,28 @@ function openProjects(evt, projectName) {
   }
 }
 
-function updateInterface(icon, text) {
+function updateInterface(obj, text) {
   let iconContainer = document.getElementById("icon-container");
-  iconContainer.innerHTML = icon;
+  iconContainer.innerHTML = obj.icon;
+  let startIndex = obj.text.indexOf(obj.highlight);
+  let highlightLength = obj.highlight.length;
+  let currentHighlight = text.substring(
+    startIndex,
+    startIndex + highlightLength,
+  );
+  let html =
+    startIndex !== -1 && text.length > startIndex
+      ? text.replace(
+          currentHighlight,
+          `<span class='about-me-text'>${currentHighlight}</span>`,
+        )
+      : text;
 
-  let textContainer = document.getElementById("typewriter-text");
-  textContainer.innerHTML = text;
+  document.getElementById("typewriter-text").innerHTML = html;
 }
 
-function getNextIndex(index, text, deleting) {
-  if (!deleting) {
-    while (text.charAt(index) === "<") {
-      index = text.indexOf(">", index) + 1;
-    }
-    index++;
-  } else {
-    index--;
-    if (text.charAt(index) === ">") {
-      index = text.lastIndexOf("<", index);
-    }
-  }
-  return index;
+function getNextIndex(index, deleting) {
+  return deleting ? index - 1 : index + 1;
 }
 
 function handleState(index, text) {
@@ -76,11 +79,10 @@ function handleState(index, text) {
 
 function type() {
   let currentObject = aboutMeData[currentLine];
-  let fullIcon = currentObject.icon;
   let fullText = currentObject.text;
-  currentChar = getNextIndex(currentChar, fullText, isDeleting);
+  currentChar = getNextIndex(currentChar, isDeleting);
   let visibleText = fullText.substring(0, currentChar);
-  updateInterface(fullIcon, visibleText);
+  updateInterface(currentObject, visibleText);
   handleState(currentChar, fullText);
   setTimeout(type, typeSpeed);
 }
