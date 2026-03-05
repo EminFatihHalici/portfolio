@@ -1034,3 +1034,7 @@ body:has(#legal-overlay:target) {
   display: flex;
   align-items: center;
 }
+
+.about-me-text {
+  color: #f8f5ec;
+}
