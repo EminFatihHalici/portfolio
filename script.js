@@ -89,3 +89,11 @@ function type() {
   handleState(currentChar, fullText);
   setTimeout(type, typeSpeed);
 }
+
+function validateEmail() {
+  let regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  let mail = document.getElementById("email").value;
+  if (!mail.match(regex)) {
+    alert("Invalid email address");
+  }
+}
