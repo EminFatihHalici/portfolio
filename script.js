@@ -95,5 +95,29 @@ function validateEmail() {
   let mail = document.getElementById("email").value;
   if (!mail.match(regex)) {
     alert("Invalid email address");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validateLetter() {
+  let name = document.getElementById("name").value;
+  let letters = /^[A-Za-z]+$/;
+  if (!name.match(letters) || name.length >= 30) {
+    alert("Name required");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validateMessage() {
+  let message = document.getElementById("message").value;
+  if (message.length == 0 || " ") {
+    alert("Message required");
+    return false;
+  } else {
+    return true;
   }
 }
