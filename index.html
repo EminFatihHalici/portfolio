@@ -678,18 +678,18 @@
               <div class="input">
                 <span class="error-text d-none" id="name-error">Your name is required</span>
                 <label for="name">Your name</label>
-                <input class="error-border" type="text" id="name" />
+                <input class="error-border" onblur="validateLetter()" type="text" id="name" />
               </div>
               <div class="input">
                 <span class="error-text d-none" id="mail-error">Your Email is required</span>
                 <label for="email">Your Email</label>
-                <input class="error-border" type="email" id="email" />
+                <input class="error-border" onblur="validateEmail()"  type="email" id="email" />
               </div>
             </div>
             <div class="input message">
               <span class="error-text d-none" id="message-error">Your message is required</span>
               <label for="message">Your message</label>
-              <textarea class="error-border" id="message"></textarea>
+              <textarea class="error-border" onblur="validateMessage()" id="message"></textarea>
             </div>
             <div class="form-footer">
               <div class="privacy-check">
@@ -697,7 +697,6 @@
                   type="checkbox"
                   id="privacy"
                   class="hidden-checkbox"
-                  required
                 />
                 <label for="privacy" class="custom-checkbox-label">
                   <span class="checkbox-icon"></span>
