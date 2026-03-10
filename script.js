@@ -101,7 +101,7 @@ function validateEmail() {
   }
 }
 
-function validateLetter() {
+function validateName() {
   let name = document.getElementById("name").value;
   let letters = /^[A-Za-z]+$/;
   if (!name.match(letters) || name.length >= 30) {
@@ -114,10 +114,30 @@ function validateLetter() {
 
 function validateMessage() {
   let message = document.getElementById("message").value;
-  if (message.length == 0 || " ") {
+  if (message.trim().length === 0) {
     alert("Message required");
     return false;
   } else {
     return true;
   }
+}
+
+function validatePrivacy() {
+  let privacyCheckbox = document.getElementById("privacy");
+  if (!privacyCheckbox.checked) {
+    alert("checkbox required");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function validateForm() {
+  let nameOk = validateName();
+  let emailOk = validateEmail();
+  let messageOk = validateMessage();
+  let privacyOk = validatePrivacy();
+  let btn = document.getElementById("send-btn");
+
+  btn.disabled = !(nameOk && emailOk && messageOk && privacyOk);
 }
