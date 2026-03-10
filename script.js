@@ -101,7 +101,7 @@ function validateEmail() {
   }
 }
 
-function validateLetter() {
+function validateName() {
   let name = document.getElementById("name").value;
   let letters = /^[A-Za-z]+$/;
   if (!name.match(letters) || name.length >= 30) {
