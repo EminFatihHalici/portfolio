@@ -92,42 +92,59 @@ function type() {
 
 function validateEmail() {
   let regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  let mail = document.getElementById("email").value;
-  if (!mail.match(regex)) {
-    alert("Invalid email address");
+  let mail = document.getElementById("email");
+  let mailError = document.getElementById("mail-error");
+  if (!mail.value.match(regex)) {
+    mailError.classList.remove("d-none");
+    mail.classList.add("error-border");
     return false;
   } else {
+    mailError.classList.add("d-none");
+    mail.classList.remove("error-border");
     return true;
   }
 }
 
 function validateName() {
-  let name = document.getElementById("name").value;
-  let letters = /^[A-Za-z]+$/;
-  if (!name.match(letters) || name.length >= 30) {
-    alert("Name required");
+  let name = document.getElementById("name");
+  let nameError = document.getElementById("name-error");
+  let letters = /^[A-Z-a-zÄÖÜäöüß\p{M}]{3,30}( [A-Z-a-zÄÖÜäöüß\p{M}]{3,30})?$/u;
+  if (!name.value.match(letters)) {
+    nameError.classList.remove("d-none");
+    name.classList.add("error-border");
     return false;
   } else {
+    nameError.classList.add("d-none");
+    name.classList.remove("error-border");
     return true;
   }
 }
 
 function validateMessage() {
-  let message = document.getElementById("message").value;
-  if (message.trim().length === 0) {
-    alert("Message required");
+  let message = document.getElementById("message");
+  let messageError = document.getElementById("message-error");
+  if (message.value.trim().length === 0) {
+    messageError.classList.remove("d-none");
+    message.classList.add("error-border");
     return false;
   } else {
+    messageError.classList.add("d-none");
+    message.classList.remove("error-border");
     return true;
   }
 }
 
 function validatePrivacy() {
   let privacyCheckbox = document.getElementById("privacy");
+  let errorCheckbox = document.getElementById("privacy-error");
+  let checkboxIcon = document.getElementById("checkbox-icon");
   if (!privacyCheckbox.checked) {
-    alert("checkbox required");
+    errorCheckbox.classList.remove("d-none");
+    checkboxIcon.classList.add("error-circle");
     return false;
   } else {
+    errorCheckbox.classList.add("d-none");
+    checkboxIcon.classList.remove("error-circle");
     return true;
   }
 }
@@ -141,3 +158,6 @@ function validateForm() {
 
   btn.disabled = !(nameOk && emailOk && messageOk && privacyOk);
 }
+
+//css eror handling in validate functions -> change alert
+// async function (sendMail) to fetch php
