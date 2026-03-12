@@ -50,6 +50,10 @@ h3 {
   display: none !important;
 }
 
+.pad-left-28 {
+  padding-left: 28px;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -1044,6 +1048,8 @@ body:has(#legal-overlay:target) {
 }
 
 .error-text {
+  font-family: "Josefin-Regular";
+  font-size: 18px;
   color: #e44c36;
 }
 

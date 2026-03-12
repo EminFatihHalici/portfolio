@@ -676,19 +676,19 @@
           <form class="mail-form">
             <div class="input-wrapper">
               <div class="input">
-                <span class="error-text d-none" id="name-error">Your name is required</span>
-                <label id="name-label" for="name">Your name</label>
+                <span class="error-text pad-left-28 d-none" id="name-error">Your name is required</span>
+                <label class="pad-left-28" id="name-label" for="name">Your name</label>
                 <input onblur="validateName()" type="text" id="name" />
               </div>
               <div class="input">
-                <span class="error-text d-none" id="mail-error">Your Email is required</span>
-                <label id="mail-label" for="email">Your Email</label>
+                <span class="error-text pad-left-28 d-none" id="mail-error">Your Email is required</span>
+                <label class="pad-left-28" id="mail-label" for="email">Your Email</label>
                 <input onblur="validateEmail()"  type="email" id="email" />
               </div>
             </div>
             <div class="input message">
-              <span class="error-text d-none" id="message-error">Your message is required</span>
-              <label id="message-label" for="message">Your message</label>
+              <span class="error-text pad-left-28 d-none" id="message-error">Your message is required</span>
+              <label class="pad-left-28" id="message-label" for="message">Your message</label>
               <textarea class=""  onblur="validateMessage()" id="message"></textarea>
             </div>
             <div class="form-footer">
@@ -706,7 +706,7 @@
                     the processing of my data as outlined.
                   </span>
                 </label>
-                   <span class="error-text d-none" id="privacy-error">Please accept the privacy policy</span>
+                   <span class="error-text pad-left-28 d-none" id="privacy-error">Please accept the privacy policy</span>
               </div>
               <button type="submit" onclick="validateForm()" id="send-btn" class="send-button">Send</button>
             </div>
