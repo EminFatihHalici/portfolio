@@ -678,18 +678,18 @@
               <div class="input">
                 <span class="error-text pad-left-28 d-none" id="name-error">Your name is required</span>
                 <label class="pad-left-28" id="name-label" for="name">Your name</label>
-                <input onblur="validateName()" type="text" id="name" />
+                <input oninput="validateName()" type="text" id="name" />
               </div>
               <div class="input">
                 <span class="error-text pad-left-28 d-none" id="mail-error">Your Email is required</span>
                 <label class="pad-left-28" id="mail-label" for="email">Your Email</label>
-                <input onblur="validateEmail()"  type="email" id="email" />
+                <input oninput="validateEmail()"  type="email" id="email" />
               </div>
             </div>
             <div class="input message">
               <span class="error-text pad-left-28 d-none" id="message-error">Your message is required</span>
               <label class="pad-left-28" id="message-label" for="message">Your message</label>
-              <textarea class=""  onblur="validateMessage()" id="message"></textarea>
+              <textarea oninput="validateMessage()" id="message"></textarea>
             </div>
             <div class="form-footer">
               <div class="privacy-check">

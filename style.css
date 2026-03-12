@@ -841,6 +841,7 @@ textarea {
 }
 
 .hidden-checkbox {
+  cursor: pointer;
   position: absolute;
   opacity: 0;
 }
@@ -898,6 +899,18 @@ a {
   border-radius: 30px;
   width: 101px;
   height: 48px;
+}
+
+.success-checked {
+  background-image: url("assets/icons/checked_icon.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.enabled {
+  cursor: pointer;
+  color: #89bcd9;
+  border: 1px #89bcd9 solid;
 }
 
 .footer-content {

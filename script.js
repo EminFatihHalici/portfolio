@@ -99,11 +99,15 @@ function validateEmail() {
     label.classList.add("d-none");
     mailError.classList.remove("d-none");
     mail.classList.add("error-border");
+    mail.classList.remove("success-checked");
     return false;
   } else {
     label.classList.remove("d-none");
     mailError.classList.add("d-none");
     mail.classList.remove("error-border");
+    mail.value.length > 0
+      ? mail.classList.add("success-checked")
+      : mail.classList.remove("success-checked");
     return true;
   }
 }
@@ -117,8 +121,12 @@ function validateName() {
     label.classList.add("d-none");
     nameError.classList.remove("d-none");
     name.classList.add("error-border");
+    name.classList.remove("success-checked");
     return false;
   } else {
+    name.value.length > 0
+      ? name.classList.add("success-checked")
+      : name.classList.remove("success-checked");
     label.classList.remove("d-none");
     nameError.classList.add("d-none");
     name.classList.remove("error-border");
@@ -131,11 +139,15 @@ function validateMessage() {
   let messageError = document.getElementById("message-error");
   let label = document.getElementById("message-label");
   if (message.value.trim().length === 0) {
+    message.classList.remove("success-checked");
     label.classList.add("d-none");
     messageError.classList.remove("d-none");
     message.classList.add("error-border");
     return false;
   } else {
+    message.value.length > 0
+      ? message.classList.add("success-checked")
+      : message.classList.remove("success-checked");
     label.classList.remove("d-none");
     messageError.classList.add("d-none");
     message.classList.remove("error-border");
@@ -166,7 +178,11 @@ function validateForm() {
   let btn = document.getElementById("send-btn");
 
   btn.disabled = !(nameOk && emailOk && messageOk && privacyOk);
+  if (nameOk && emailOk && messageOk && privacyOk) {
+    btn.classList.add("enabled");
+  } else {
+    btn.classList.remove("enabled");
+  }
 }
 
-//css eror handling in validate functions -> change alert
 // async function (sendMail) to fetch php
