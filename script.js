@@ -94,11 +94,14 @@ function validateEmail() {
   let regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
   let mail = document.getElementById("email");
   let mailError = document.getElementById("mail-error");
+  let label = document.getElementById("mail-label");
   if (!mail.value.match(regex)) {
+    label.classList.add("d-none");
     mailError.classList.remove("d-none");
     mail.classList.add("error-border");
     return false;
   } else {
+    label.classList.remove("d-none");
     mailError.classList.add("d-none");
     mail.classList.remove("error-border");
     return true;
@@ -108,12 +111,15 @@ function validateEmail() {
 function validateName() {
   let name = document.getElementById("name");
   let nameError = document.getElementById("name-error");
+  let label = document.getElementById("name-label");
   let letters = /^[A-Z-a-zÄÖÜäöüß\p{M}]{3,30}( [A-Z-a-zÄÖÜäöüß\p{M}]{3,30})?$/u;
   if (!name.value.match(letters)) {
+    label.classList.add("d-none");
     nameError.classList.remove("d-none");
     name.classList.add("error-border");
     return false;
   } else {
+    label.classList.remove("d-none");
     nameError.classList.add("d-none");
     name.classList.remove("error-border");
     return true;
@@ -123,11 +129,14 @@ function validateName() {
 function validateMessage() {
   let message = document.getElementById("message");
   let messageError = document.getElementById("message-error");
+  let label = document.getElementById("message-label");
   if (message.value.trim().length === 0) {
+    label.classList.add("d-none");
     messageError.classList.remove("d-none");
     message.classList.add("error-border");
     return false;
   } else {
+    label.classList.remove("d-none");
     messageError.classList.add("d-none");
     message.classList.remove("error-border");
     return true;
