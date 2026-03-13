@@ -92,42 +92,80 @@ function type() {
 
 function validateEmail() {
   let regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  let mail = document.getElementById("email").value;
-  if (!mail.match(regex)) {
-    alert("Invalid email address");
+  let mail = document.getElementById("email");
+  let mailError = document.getElementById("mail-error");
+  let label = document.getElementById("mail-label");
+  if (!mail.value.match(regex)) {
+    label.classList.add("d-none");
+    mailError.classList.remove("d-none");
+    mail.classList.add("error-border");
+    mail.classList.remove("success-checked");
     return false;
   } else {
+    label.classList.remove("d-none");
+    mailError.classList.add("d-none");
+    mail.classList.remove("error-border");
+    mail.value.length > 0
+      ? mail.classList.add("success-checked")
+      : mail.classList.remove("success-checked");
     return true;
   }
 }
 
 function validateName() {
-  let name = document.getElementById("name").value;
-  let letters = /^[A-Za-z]+$/;
-  if (!name.match(letters) || name.length >= 30) {
-    alert("Name required");
+  let name = document.getElementById("name");
+  let nameError = document.getElementById("name-error");
+  let label = document.getElementById("name-label");
+  let letters = /^[A-Z-a-zÄÖÜäöüß\p{M}]{3,30}( [A-Z-a-zÄÖÜäöüß\p{M}]{3,30})?$/u;
+  if (!name.value.match(letters)) {
+    label.classList.add("d-none");
+    nameError.classList.remove("d-none");
+    name.classList.add("error-border");
+    name.classList.remove("success-checked");
     return false;
   } else {
+    name.value.length > 0
+      ? name.classList.add("success-checked")
+      : name.classList.remove("success-checked");
+    label.classList.remove("d-none");
+    nameError.classList.add("d-none");
+    name.classList.remove("error-border");
     return true;
   }
 }
 
 function validateMessage() {
-  let message = document.getElementById("message").value;
-  if (message.trim().length === 0) {
-    alert("Message required");
+  let message = document.getElementById("message");
+  let messageError = document.getElementById("message-error");
+  let label = document.getElementById("message-label");
+  if (message.value.trim().length === 0) {
+    message.classList.remove("success-checked");
+    label.classList.add("d-none");
+    messageError.classList.remove("d-none");
+    message.classList.add("error-border");
     return false;
   } else {
+    message.value.length > 0
+      ? message.classList.add("success-checked")
+      : message.classList.remove("success-checked");
+    label.classList.remove("d-none");
+    messageError.classList.add("d-none");
+    message.classList.remove("error-border");
     return true;
   }
 }
 
 function validatePrivacy() {
   let privacyCheckbox = document.getElementById("privacy");
+  let errorCheckbox = document.getElementById("privacy-error");
+  let checkboxIcon = document.getElementById("checkbox-icon");
   if (!privacyCheckbox.checked) {
-    alert("checkbox required");
+    errorCheckbox.classList.remove("d-none");
+    checkboxIcon.classList.add("error-circle");
     return false;
   } else {
+    errorCheckbox.classList.add("d-none");
+    checkboxIcon.classList.remove("error-circle");
     return true;
   }
 }
@@ -140,4 +178,43 @@ function validateForm() {
   let btn = document.getElementById("send-btn");
 
   btn.disabled = !(nameOk && emailOk && messageOk && privacyOk);
+  if (nameOk && emailOk && messageOk && privacyOk) {
+    btn.classList.add("enabled");
+  } else {
+    btn.classList.remove("enabled");
+  }
+}
+
+async function sendMail(event) {
+  event.preventDefault();
+  let btn = document.getElementById("send-btn");
+  let data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  try {
+    btn.disabled = true;
+
+    let response = await fetch("contact_form_mail.php", {
+      method: "POST",
+      headers: { "Content-Typ": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    let result = await response.json();
+
+    if (result.success) {
+      alert("well done");
+      event.target.reset();
+      validateForm();
+    } else {
+      alert("not well done" + result.error);
+    }
+  } catch (error) {
+    alert("server issues");
+  } finally {
+    btn.disabled = false;
+  }
 }

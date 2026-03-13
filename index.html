@@ -673,23 +673,23 @@
               </div>
             </div>
           </div>
-          <form class="mail-form">
+          <form class="mail-form" onsubmit="sendMail(event)">
             <div class="input-wrapper">
               <div class="input">
-                <span class="error-text d-none" id="name-error">Your name is required</span>
-                <label for="name">Your name</label>
-                <input class="error-border" oninput="validateForm()" onblur="validateName()" type="text" id="name" />
+                <span class="error-text pad-left-28 d-none" id="name-error">Your name is required</span>
+                <label class="pad-left-28" id="name-label" for="name">Your name</label>
+                <input oninput="validateName()" type="text" id="name" />
               </div>
               <div class="input">
-                <span class="error-text d-none" id="mail-error">Your Email is required</span>
-                <label for="email">Your Email</label>
-                <input class="error-border" oninput="validateForm()" onblur="validateEmail()"  type="email" id="email" />
+                <span class="error-text pad-left-28 d-none" id="mail-error">Your Email is required</span>
+                <label class="pad-left-28" id="mail-label" for="email">Your Email</label>
+                <input oninput="validateEmail()"  type="email" id="email" />
               </div>
             </div>
             <div class="input message">
-              <span class="error-text d-none" id="message-error">Your message is required</span>
-              <label for="message">Your message</label>
-              <textarea class="" oninput="validateForm()" onblur="validateMessage()" id="message"></textarea>
+              <span class="error-text pad-left-28 d-none" id="message-error">Your message is required</span>
+              <label class="pad-left-28" id="message-label" for="message">Your message</label>
+              <textarea oninput="validateMessage()" id="message"></textarea>
             </div>
             <div class="form-footer">
               <div class="privacy-check">
@@ -697,14 +697,16 @@
                   type="checkbox"
                   id="privacy"
                   class="hidden-checkbox"
+                  onchange="validatePrivacy()"
                 />
-                <label for="privacy" onblur="validatePrivacy()" class="custom-checkbox-label">
-                  <span class="checkbox-icon"></span>
+                <label for="privacy" class="custom-checkbox-label">
+                  <span id="checkbox-icon" class="checkbox-icon"></span>
                   <span
                     >I've read the <a href="#">privacy policy</a> and agree to
                     the processing of my data as outlined.
                   </span>
                 </label>
+                   <span class="error-text pad-left-28 d-none" id="privacy-error">Please accept the privacy policy</span>
               </div>
               <button type="submit" onclick="validateForm()" id="send-btn" class="send-button">Send</button>
             </div>
