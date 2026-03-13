@@ -185,4 +185,36 @@ function validateForm() {
   }
 }
 
-// async function (sendMail) to fetch php
+async function sendMail(event) {
+  event.preventDefault();
+  let btn = document.getElementById("send-btn");
+  let data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  try {
+    btn.disabled = true;
+
+    let response = await fetch("contact_form_mail.php", {
+      method: "POST",
+      headers: { "Content-Typ": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    let result = await response.json();
+
+    if (result.success) {
+      alert("well done");
+      event.target.reset();
+      validateForm();
+    } else {
+      alert("not well done" + result.error);
+    }
+  } catch (error) {
+    alert("server issues");
+  } finally {
+    btn.disabled = false;
+  }
+}
