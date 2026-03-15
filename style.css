@@ -1074,3 +1074,7 @@ body:has(#legal-overlay:target) {
 .error-border {
   border: 1px #e44c36 solid !important;
 }
+
+* {
+  box-sizing: border-box;
+}
